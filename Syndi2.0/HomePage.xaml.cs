@@ -16,6 +16,7 @@ using System.DirectoryServices;
 using NetworkScanner;
 using System.IO;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Syndi2._0
 {
@@ -286,7 +287,9 @@ namespace Syndi2._0
         {
             // System.Windows.Forms.MessageBox.Show(path.Trim());
             Console.WriteLine("_____________Debug_____________");
-            Console.WriteLine(path);
+            //Console.WriteLine(path.Trim());
+            //path = Regex.Replace(path, @" +\\", @"\");
+            //Console.WriteLine(path);
             System.Diagnostics.Process.Start(path.Trim());
         }
         private async void DownloadItem(object sender, RoutedEventArgs e, string path)
